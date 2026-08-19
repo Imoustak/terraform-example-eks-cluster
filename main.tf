@@ -44,6 +44,10 @@ module "eks" {
   create_cluster_security_group               = false
   create_node_security_group                  = false
   create_cluster_primary_security_group_tags  = false
+  create_kms_key            = false
+  cluster_encryption_config = {}
+  create_cloudwatch_log_group = false
+  cluster_enabled_log_types   = []
 
   cluster_addons = {
     aws-ebs-csi-driver = {
